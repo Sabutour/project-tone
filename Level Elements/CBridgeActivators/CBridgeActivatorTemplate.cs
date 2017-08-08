@@ -31,16 +31,7 @@ public class CBridgeActivator1Level1 : MonoBehaviour
 
   // This section of the script continually checks to see if a variable controlling the on/off state of a bridge has been switched and, if so, turns on the corresponding bridge colour GameObject.
 	void Update() {
-		if (blueBridgeActive == true)
-		{
-			blueBridge.SetActive (true);
-		}
-		else if (blueBridgeActive == false)
-		{
-			blueBridge.SetActive (false);
-		}
-
-
+	  
 		if (redBridgeActive == true)
 		{
 			redBridge.SetActive (true);
@@ -50,7 +41,6 @@ public class CBridgeActivator1Level1 : MonoBehaviour
 			redBridge.SetActive (false);
 		}
 
-		
 		if (greenBridgeActive == true)
 		{
 		  greenBridge.SetActive (true);
@@ -59,6 +49,15 @@ public class CBridgeActivator1Level1 : MonoBehaviour
 		{
 		  greenBridge.SetActive (false);
 		}
+	
+		if (blueBridgeActive == true)
+		{
+			blueBridge.SetActive (true);
+		}
+		else if (blueBridgeActive == false)
+		{
+			blueBridge.SetActive (false);
+		}
 	}
 
 	void OnCollisionStay2D(Collision2D  other) //
@@ -66,26 +65,15 @@ public class CBridgeActivator1Level1 : MonoBehaviour
 		Debug.Log("Entered Collider");
 		if (other.gameObject.CompareTag("Player"))
 		{
-		  if (GlobalVariables.CollectedBlueBrush == true)
-		  {
-		    Debug.Log("Player Detected");
-			  if (Input.GetKeyDown(KeyCode.Alpha1) && redBridgeActive == false && greenBridgeActive == false)
-			  {
-				  Debug.Log ("'1' Pressed. Blue Bridge Extended.");
-				  blueBridgeActive = !blueBridgeActive;
-			  }
-		  }
 		  
-		  
-			else if (GlobalVariables.CollectedRedBrush == true)
+			if (GlobalVariables.CollectedRedBrush == true)
 			{
-			  else if (Input.GetKeyDown(KeyCode.Alpha2) && blueBridgeActive == false && greenBridgeActive)
+			  if (Input.GetKeyDown(KeyCode.Alpha2) && blueBridgeActive == false && greenBridgeActive)
 			  {
 				  Debug.Log ("'2' Pressed. Red Bridge Extended.");
 				  redBridgeActive = !redBridgeActive;
 			  }
 			}
-			
 			
 			else if (GlobalVariables.CollectedGreenBrush == true)
 			{
@@ -95,6 +83,16 @@ public class CBridgeActivator1Level1 : MonoBehaviour
 			    greenBridgeActive = !greenBridgeActive;
 			  }
 			}
+		  
+		  else if (GlobalVariables.CollectedBlueBrush == true)
+		  {
+		    Debug.Log("Player Detected");
+			  else if (Input.GetKeyDown(KeyCode.Alpha1) && redBridgeActive == false && greenBridgeActive == false)
+			  {
+				  Debug.Log ("'1' Pressed. Blue Bridge Extended.");
+				  blueBridgeActive = !blueBridgeActive;
+			  }
+		  }
 		}
 	}
 }
