@@ -6,11 +6,11 @@ using System.Collections;
 
 public class GlobalVariables : MonoBehaviour {
 
-	static public bool CollectedBlueBrush = false; // Whether or not the player has the Blue Brush.
-	
 	static public bool CollectedRedBrush = false; // Whether or not the player has the Red Brush.
 	
 	static public bool CollectedGreenBrush = false; // Whether or not the player has the Green Brush.
+	
+	static public bool CollectedBlueBrush = false; // Whether or not the player has the Blue Brush.
 
 	static public int CurrentLevel; // Keeps track of the current loaded Unity Scene.
 
