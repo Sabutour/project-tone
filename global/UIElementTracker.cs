@@ -13,7 +13,7 @@ namespace UnityStandardAssets._2D
     public GameObject greenBrushUIElement;
     public GameObject blueBrushUIElement;
       
-    Color InActiveUIElement = new Color(d3,d3,d3,0.8); //All inactive UI elements will be set to this grey, transluscent color.
+    Color InActiveUIElement = new Color(d3,d3,d3,0.7); //All inactive UI elements will be set to this grey, transluscent color.
     Color ActiveUIElement = new Color(00,00,00,1); //All active UI elements will be their original color and fully opaque.
       
     //Use this for initialisation.
