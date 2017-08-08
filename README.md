@@ -1,6 +1,6 @@
 # Editing Code
 
-If you wish to edit any code, do so in the **code-test** branch, **_not_** the **master** branch. Also, do so in the form of a Pull Request, so that any chances may be vetted before being applied.
+If you wish to edit any code, do so in the **code-test** branch, **_not_** the **master** branch. Also, all pull requests (requests to merge one branch with another, such as the code-test branch with the master branch) must be vetted before being confirmed.
 
 # Issues
 
